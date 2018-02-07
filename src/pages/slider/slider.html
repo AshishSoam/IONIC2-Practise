@@ -1,0 +1,21 @@
+
+<ion-header>
+    <ion-navbar> 
+      
+      <ion-title text-center>WELCOME</ion-title> 
+      <ion-buttons end> 
+      <button ion-button icon-only (click)="home()" > 
+      <ion-icon name="home" click></ion-icon>
+     </button> 
+    </ion-buttons> 
+    </ion-navbar>
+    </ion-header>
+
+
+<ion-content >
+<ion-slides class="image-slider" autoplay="1000" speed="2000" loop="true" pager="true"  effect="coverflow">
+  <ion-slide *ngFor="let img of images">
+    <img src="assets/img/{{img}}" class="thumb-img">
+  </ion-slide>
+</ion-slides>
+</ion-content>

@@ -1,0 +1,111 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background" padding>
+  <ion-card>
+    <ion-card-header>Signup form</ion-card-header>
+    <ion-card-content>
+       <form [formGroup]="signup_form">
+      
+      
+          
+          <div style="position: relative">
+            <ion-avatar>
+              <img [src]="imgSrc" style="margin-bottom:20px;border-radius:100%;">
+              <ion-fab right bottom>
+                <button  color="facebook" ion-fab class="icon ios-camera"(click)="upload()">
+                  <ion-icon name='camera'></ion-icon>
+                </button>
+              </ion-fab></ion-avatar>
+            </div>
+          
+          <!-- <button ion-button block  color="facebook" (click)="upload()" >upload</button> -->
+          <ion-list no-line>
+        <ion-item>
+          <ion-input type="text" formControlName="Firstname" placeholder="Firstname" [(ngModel)]="usersignup.Firstname"  ></ion-input>
+        </ion-item>
+        <div style="color:red" *ngIf="signup_form.controls.Firstname.invalid && signup_form.controls.Firstname.dirty">
+          Please enter a valid name 
+        </div>
+        <ion-item>
+          <ion-input type="text" formControlName="Lastname" placeholder="Lastname" [(ngModel)]="usersignup.Lastname" ></ion-input>
+        </ion-item>
+        <div style="color:red" *ngIf="signup_form.controls.Lastname.invalid && signup_form.controls.Lastname.dirty">
+            Please enter a valid name 
+          </div>
+
+
+        <!-- <ion-item>
+            <ion-datetime formControlName="dob" placeholder="Date of birth" ></ion-datetime>
+          </ion-item>
+          <div style="color:red" *ngIf="signup_form.controls.dob.invalid && signup_form.controls.dob.dirty">
+              Please enter a valid date 
+            </div> -->
+
+         <ion-item>
+          <ion-input type="email" formControlName="email" placeholder="Email" [(ngModel)]="usersignup.email"></ion-input>
+        </ion-item>
+        <div style="color:red" *ngIf="signup_form.controls.email.invalid && signup_form.controls.email.dirty">
+            Please enter a valid email 
+          </div>
+       <ion-item>
+          <ion-input type="tel" formControlName="mobile" placeholder="Mobile" [(ngModel)]="usersignup.mobile"></ion-input>
+        </ion-item>
+        <div style="color:red" *ngIf="signup_form.controls.mobile.invalid && signup_form.controls.mobile.dirty">
+            Please enter a valid mobile
+          </div>
+        <!-- <ion-item>
+          <ion-input type="text" formControlName="address" placeholder="Address" [(ngModel)]="usersignup.address"></ion-input>
+        </ion-item>
+        <div style="color:red" *ngIf="signup_form.controls.address.invalid && signup_form.controls.address.dirty">
+            Please enter a valid address
+          </div> -->
+          <ion-item>
+           <ion-input type="text" id="address" placeholder="Address"  formControlName="address" [(ngModel)]="usersignup.address" ></ion-input>
+          </ion-item>
+          <div style="color:red" *ngIf="signup_form.controls.address.invalid && signup_form.controls.address.dirty">
+              Please enter a valid address
+            </div>
+        <ion-item>
+          <ion-input type="tel" formControlName="age" placeholder="Age" [(ngModel)]="usersignup.age" ></ion-input>
+        </ion-item>
+        <div style="color:red" *ngIf="signup_form.controls.age.invalid && signup_form.controls.age.dirty">
+            Please enter a valid age
+          </div>
+        <ion-item>
+          <ion-input type="text" formControlName="company" placeholder="Company" [(ngModel)]="usersignup.company" ></ion-input>
+        </ion-item>
+        <div style="color:red" *ngIf="signup_form.controls.company.invalid && signup_form.controls.company.dirty">
+            Please enter a valid company name
+          </div>
+       
+        
+        <button ion-button block  color="facebook" [disabled]="!signup_form.valid" (click)="signup()">Signup</button>
+       
+        <button  ion-button clear full color="light" (click)="login()">Already have an account? Login</button>
+      </ion-list>
+       </form>
+    </ion-card-content>
+  </ion-card>
+  
+  </ion-content>
+<!-- <ion-footer>
+    <ion-toolbar>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-footer> -->

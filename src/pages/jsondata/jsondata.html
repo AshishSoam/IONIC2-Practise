@@ -1,0 +1,32 @@
+<ion-header>
+    
+      <ion-navbar color="Light">
+          <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+        <ion-title>JSON data</ion-title>
+      </ion-navbar>
+    
+    </ion-header>
+
+
+<ion-content class="background" >
+    <ion-card>
+        <ion-card-header style="font-size:30px;font-family:cursive" ><label>Json data</label></ion-card-header>
+    <ion-card-content>
+    <ion-list no-line>
+  
+        <ion-item *ngFor="let x of jsonData">
+        
+            
+       
+         <p style="text-align:center">{{x.product}}</p>
+              
+
+      
+        </ion-item>
+
+      </ion-list>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,47 @@
+<!--
+  Generated template for the UserdetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="Light">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>userdetails</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background">
+  <ion-card>
+    <ion-card-header style="font-size:30px;font-family:cursive" ><label>User Details</label></ion-card-header>
+    <ion-card-content>
+      <ion-list no-line>
+        <div>
+          <p *ngIf="abc.img" ><img [src]="abc.img"style="height:200px;width:200px;margin-left:33%;margin-bottom:20px"></p>
+          <p *ngIf=abc.Firstname>Firstname:{{abc.Firstname}}</p>
+          <p *ngIf=abc.Lastname>Lastname:{{abc.Lastname}}
+          <p *ngIf=abc.email>Email:{{abc.email}}</p>
+          <p *ngIf=abc.mobile>Mobile:{{abc.mobile}}</p>
+          <p *ngIf=abc.address>Address:{{abc.address}}</p>
+          <p *ngIf=abc.age>Age:{{abc.age}}</p>
+          <p *ngIf=abc.company>Company:{{abc.company}}</p>
+          <p *ngIf = !abc.mobile>Please fill in some details</p>
+       
+
+        </div>
+      
+
+    
+       
+       
+        
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  
+  </ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+ Google+ info
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+   
+  <ion-content class="background">
+    
+   
+    <ion-card >
+      <ion-card-header>{{ newwobj.username }}</ion-card-header>
+      <img [src]="newwobj.imgUrl" />
+      <ion-card-content>
+        <p>Email: {{ newwobj.email }}</p>
+        <!-- <p>First Name: {{ newobj.first_name }}</p> -->
+    
+      </ion-card-content>
+    </ion-card> 
+   
+  </ion-content>

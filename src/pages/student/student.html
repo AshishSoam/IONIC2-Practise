@@ -1,0 +1,52 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+<ion-navbar> 
+  <!-- <button ion-button menuToggle> 
+    <ion-icon name="menu"></ion-icon> 
+  </button>  -->
+  <ion-title>Student Details</ion-title> 
+  <ion-buttons end> 
+  <button ion-button icon-only (click)="logout()" > 
+  <ion-icon name="log-out"></ion-icon>
+ </button> 
+</ion-buttons> 
+</ion-navbar>
+</ion-header>
+  
+  <ion-content class="background">
+    <ion-card>
+      <ion-card-header>Student form</ion-card-header>
+      <ion-card-content>
+
+        <ion-list no-line>
+          <ion-item>
+            <ion-input type="text" placeholder="Student name" [(ngModel)]="student.name"   ></ion-input>
+          </ion-item>
+          
+          
+  
+   
+          <ion-item>
+              <ion-input type="text" id="address3" placeholder="Address" [(ngModel)]="student.address3" ></ion-input>
+             </ion-item>
+         
+     
+          <button ion-button block  color="facebook"  (click)="submit()">Submit</button>
+         
+          
+        </ion-list>
+
+      </ion-card-content>
+    </ion-card>
+    
+    </ion-content>
+  <!-- <ion-footer>
+      <ion-toolbar>
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-footer> -->

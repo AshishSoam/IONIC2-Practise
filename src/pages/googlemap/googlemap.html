@@ -1,0 +1,33 @@
+
+<ion-header>
+    
+      <ion-navbar>
+          <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+        <ion-title>GoogleMap</ion-title>
+      </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content  class="background">
+        <ion-card>
+            <ion-card-header>Add Places</ion-card-header>
+            <ion-card-content>
+      
+          <ion-item>
+              <ion-input type="text" id="address1" placeholder="Address" [(ngModel)]="useraddress.address1"  ></ion-input>
+             </ion-item>
+          
+           
+        <button ion-button block color="facebook" type="submit" (click)="loadMap()">Show on map</button>
+           
+        <button ion-button block color="facebook" type="submit" (click)="geomap()">Geolocation</button>
+      
+   
+    </ion-card-content>
+    </ion-card>
+
+    </ion-content>
+    
